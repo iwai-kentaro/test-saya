@@ -1,0 +1,146 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.p-complete {
+  $p-complete: &;
+  #{$p-complete}-mv {
+    background-image: url(../images/contact/contact-mv01.webp);
+  }
+  // タイトルから説明まで
+  #{$p-complete}-intro {
+    padding-top: 12.6rem;
+    padding-bottom: 16.8rem;
+    position: relative;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 8rem;
+    }
+    &__title {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      color: $c-black;
+      letter-spacing: 0.09em;
+      margin-bottom: 8rem;
+      @include mq(md, max) {
+        font-size: 2.4rem;
+        margin-top: 2.5rem;
+        margin-bottom: 6.4rem;
+      }
+    }
+    &__text{
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: calc(35/16);
+      letter-spacing: 0.09em;
+      color: $c-black;
+        @include mq(md, max) {
+          font-size: 1.3rem;
+        }
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+
+
+  }
+  // メールが受信できなかった場合
+  #{$p-complete}-none{
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+    &__inner{
+      background-color: $c-bg-gray;
+      padding: 6.2rem 6.5rem;
+      margin-top: 8.5rem;
+        @include mq(md , max) {
+          padding: 5rem;
+          margin-bottom: 6.8rem;
+        }
+    }
+    &__title{
+      font-size: 2.4rem;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.09em;
+      color: $c-main;
+        @include mq(md , max) {
+          font-size: 1.9rem;
+        }
+
+    }
+    &__list{
+      margin-top: 6.78rem;
+      margin-bottom: 6.5rem;
+        @include mq(md , max) {
+          margin-top: 5.4rem;
+          margin-bottom: 5rem;
+        }
+    }
+    &__item{
+      font-size: 1.6rem;
+      letter-spacing: 0.09em;
+      line-height: calc(35/16);
+      color: $c-black;
+        @include mq(md , max) {
+          font-size: 1.3rem;
+        }
+    }
+    &__sub{
+      text-align: center;
+      font-size: 2rem;
+      color: $c-black;
+      letter-spacing: 0.09em;
+        @include mq(md , max) {
+          font-size: 1.6rem;
+        }
+      &-text{
+        text-align: center;
+        font-size: 1.6rem;
+        letter-spacing: 0.09em;
+        color: $c-black;
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+        @include mq(md , max) {
+          font-size: 1.3rem;
+          margin-top: 2.4rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    .l-complete-none__telbox-img{
+      max-width: 31.2rem;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+
+}

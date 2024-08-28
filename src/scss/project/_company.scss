@@ -1,0 +1,346 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.p-company {
+  $p-company: &;
+  #{$p-company}-mv {
+    background-image: url(../images/company/company-mv.webp);
+  }
+
+  #{$p-company}-intro {
+    padding-top: 12.6rem;
+    padding-bottom: 16.8rem;
+    position: relative;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 8rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 97%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+    &__box {
+      margin-top: 5.7rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__box + &__box {
+      margin-top: 5.3rem;
+      @include mq(md, max) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+  // 会社概要
+  #{$p-company}__box {
+    &-title {
+      font-size: 3.6rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      line-height: 1;
+      color: $c-black;
+      border-left: 1rem solid $c-main;
+      padding-top: 1.5rem;
+      padding-left: 3rem;
+      @include mq(md, max) {
+        font-size: 2.2rem;
+        padding-top: 0.8rem;
+        padding-left: 2rem;
+        border-left: 0.8rem solid $c-main;
+      }
+    }
+    &-container {
+      @include mq(md, max) {
+      }
+      &-imgBox {
+        padding-bottom: 9rem;
+        position: relative;
+        @include mq(lg, max) {
+          padding-bottom: 7.2rem;
+        }
+        @include mq(md, max) {
+          padding-bottom: 4rem;
+        }
+      }
+      &-img {
+        max-width: 90.5rem;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 9.2rem;
+        @include mq(lg, max) {
+          width: 90%;
+          margin-top: 7.36rem;
+        }
+        @include mq(md, max) {
+          max-width: 90%;
+          margin-top: 5rem;
+        }
+      }
+      &-imgBg {
+        max-width: 90.5rem;
+        width: 80%;
+        height: 80%;
+        background-color: $c-company-imgBg;
+        bottom: 0;
+        position: absolute;
+        z-index: -1;
+      }
+      &-textBox {
+        flex: 1;
+        margin-top: -0.5rem;
+      }
+      &-text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        line-height: calc(35 / 16);
+        color: $c-black;
+        @include mq(md, max) {
+          font-size: 1.3rem;
+        }
+        & + #{$p-company}__box-container-text {
+          padding-top: 3.7rem;
+          @include mq(md, max) {
+            padding-top: 2.96rem;
+          }
+        }
+      }
+    }
+    &-text {
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      line-height: calc(35 / 16);
+      color: $c-black;
+      @include mq(md, max) {
+        font-size: 1.3rem;
+      }
+      & + #{$p-company}__box-text {
+        padding-top: 3.7rem;
+        @include mq(md, max) {
+          padding-top: 2.96rem;
+        }
+      }
+    }
+  }
+  #{$p-company}__info {
+    margin-top: 9.3rem;
+    @include mq(lg, max) {
+      margin-top: 7.4rem;
+    }
+    &-box {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 3.3rem;
+      padding-bottom: 3.3rem;
+      @include mq(md, max) {
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      &:nth-child(1) {
+        padding-top: 0;
+      }
+      &:nth-last-child(1) {
+        padding-bottom: 0;
+      }
+      & + #{$p-company}__info-box {
+        border-top: 0.5px solid $c-gray03;
+      }
+    }
+    &-title {
+      max-width: 29rem;
+      width: 100%;
+      height: auto;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      line-height: calc(35 / 16);
+      color: $c-main;
+      @include mq(md, max) {
+        font-size: 1.3rem;
+      }
+    }
+    &-desc {
+      flex: 1;
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      line-height: calc(35 / 16);
+      @include mq(md, max) {
+        padding-left: 2.5rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+  // 対応エリア
+  #{$p-company}-suggest {
+    &__area {
+      &-wrap {
+        padding-top: 13.4rem;
+        @include mq(lg, max) {
+          padding-top: 10.7rem;
+        }
+        @include mq(md, max) {
+          padding-top: 8rem;
+        }
+      }
+      &-title {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        @include mq(md, max) {
+          font-size: 2rem;
+        }
+      }
+      &-img {
+        margin-top: 5rem;
+        @include mq(md, max) {
+          margin-top: 2rem;
+        }
+      }
+    }
+    &__content {
+      margin-top: 7rem;
+      display: flex;
+      // column-gap: 6.25vw;
+      @include mq(md, max) {
+        flex-direction: column;
+        // row-gap: 4rem;
+        margin-top: 4rem;
+      }
+    }
+    &__left {
+      padding-right: 3.125vw;
+      border-right: 1px solid $c-main;
+      @include mq(md, max) {
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 3rem;
+      }
+      p {
+        width: fit-content;
+        margin-inline: auto;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $c-main;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid $c-main;
+        @include mq(md, max) {
+          margin-top: 1.8rem;
+          font-size: 1.8rem;
+        }
+      }
+    }
+    &__right {
+      padding-left: 3.125vw;
+      @include mq(md, max) {
+        padding-left: 0;
+        padding-top: 3rem;
+      }
+      p {
+        width: fit-content;
+        margin-inline: auto;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $c-main;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid $c-main;
+        @include mq(md, max) {
+          margin-top: 1.8rem;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  // 対応エリア
+  #{$p-company}__signature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2.62rem;
+    margin-top: 3.7rem;
+    @include mq(md, max) {
+      gap: 2rem;
+      margin-top: 2.96rem;
+    }
+    &-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      color: $c-black;
+      @include mq(md, max) {
+        font-size: 1.44rem;
+      }
+    }
+    &-img {
+      max-width: 15.4rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+  // 代表挨拶
+
+  // staff
+  #{$p-company}-access {
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+    background-image: url(../images/top/service-bg.png);
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+    }
+    &__title-box {
+      margin-bottom: 7.2rem;
+      @include mq(md, max) {
+        margin-bottom: 5rem;
+      }
+    }
+    &__map{
+      max-width: 110rem;
+      width: 100%;
+      height: 44.8rem;
+        @include mq(md , max) {
+          height: 38rem;
+        }
+      iframe{
+        max-width: 110rem;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

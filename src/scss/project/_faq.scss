@@ -1,0 +1,240 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.p-faq {
+  $p-faq: &;
+  #{$p-faq}-mv {
+    background-image: url(../images/faq/faq-mv.webp);
+  }
+
+  #{$p-faq}-intro {
+    padding-top: 12.6rem;
+    padding-bottom: 16.8rem;
+    position: relative;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 8rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+
+    &__title {
+      font-size: 3.6rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 4rem;
+      color: $c-main;
+      @include mq(md, max) {
+        font-size: 2.4rem;
+        margin-top: 2.5rem;
+      }
+    }
+
+    &__box {
+      margin-top: 5.7rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__box + &__box {
+      margin-top: 5.3rem;
+      @include mq(md, max) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+  #{$p-faq}-secondTitle{
+    margin-top: 12.6rem;   
+      @include mq(md , max) {
+        margin-top: 5rem;
+      } 
+  }
+  #{$p-faq}__container {
+    background-color: $c-bg-gray;
+    border: 1px solid $c-faq-border;
+    margin-top: 6rem;
+      @include mq(lg,max) {
+        margin-top: 5rem;
+      }
+        @include mq(md , max) {
+          margin-top: 3rem;
+        }
+  }
+  #{$p-faq}__q {
+    display: flex;
+    align-items: center;
+    padding: 4.8rem 5rem;
+    column-gap: 2rem;
+    cursor: pointer;
+    position: relative;
+      @include mq(lg,max) {
+        padding: 4rem 4rem;
+        column-gap: 1.5rem;
+      }
+        @include mq(md , max) {
+          padding: 2rem 4rem 2rem 2rem;
+        }
+    &::after{
+      content: "";
+      display: inline-block;
+      background-image: url(../images/faq/down-arrow.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 2.8rem;
+      height: 1.5rem;
+      position: absolute;
+      right: 5rem;
+      top: 50%;
+      transform: translateY(-50%);
+        @include mq(lg , max) {
+          right: 2rem;
+          width: 2rem;
+        }
+          @include mq(md , max) {
+            width: 1.5rem;
+          }
+    }
+    &-title{
+      font-size: 2.4rem;
+      font-weight: 500;
+      font-family: $second-ff;
+      color: $c-main;
+      line-height: calc(29/24);
+      letter-spacing: 0.09em;
+        @include mq(lg,max) {
+          font-size: 2rem;
+        }
+          @include mq(md , max) {
+            font-size: 1.6rem;
+          }
+    }
+    &-desc{
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: calc(44/20);
+      letter-spacing: 0.09em;
+      padding-top: 0.5rem;
+      color: $c-black;
+      @include mq(lg,max) {
+        font-size: 2rem;
+      }
+        @include mq(md , max) {
+          font-size: 1.6rem;
+        }
+    }
+  }
+  #{$p-faq}__a{
+    display: flex;
+    column-gap: 2rem;
+    height: 0;
+    overflow: hidden;
+      @include mq(lg , max) {
+        column-gap: 1.5rem;
+      }
+    &-title{
+      font-size: 2.4rem;
+      font-weight: 500;
+      font-family: $second-ff;
+      color: $c-faq-aTitle;
+      line-height: calc(29/24);
+      letter-spacing: 0.09em;
+      padding-left: 5rem;
+      padding-bottom: 4.8rem;
+        @include mq(lg,max) {
+      font-size: 2rem;
+      padding-bottom: 4rem;
+      padding-left: 4rem;
+        }
+          @include mq(md , max) {
+            font-size: 1.6rem;
+            padding-bottom: 2rem;
+            padding-left: 2rem;
+          }
+    }
+    &-desc{
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: calc(35/16);
+      letter-spacing: 0.09em;
+      color: $c-black;
+      padding-bottom: 4.8rem;
+      padding-right: 5rem;
+        @include mq(lg,max) {
+          font-size: 1.2rem;
+          padding-bottom: 4rem;
+          padding-right: 4rem;
+        }
+          @include mq(md , max) {
+            padding-bottom: 2rem;
+            padding-right: 2rem;
+          }
+    }
+  }
+
+  #{$p-faq}-consultation{
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+    background-image: url(../images/top/service-bg.png);
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+    }
+    &__inner{
+      max-width: 155rem;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+        @include mq(md , max) {
+          padding-right: 1.5rem;
+          padding-left: 1.5rem;
+        }
+    }
+    &__box{
+      background-color: $c-white;
+      border: 1px solid $c-border-tel;
+      padding-top: 9.6rem;
+      padding-bottom: 9.7rem;
+        @include mq(lg,max) {
+          padding-top: 8rem;
+          padding-bottom: 8rem;
+        }
+          @include mq(md , max) {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+          }
+    }
+  }
+
+}

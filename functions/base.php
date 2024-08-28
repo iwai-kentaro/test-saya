@@ -14,6 +14,7 @@ function add_files()
 		//javascript
 		wp_deregister_script('jquery');
 		wp_enqueue_script('jquery-main', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js');
+		wp_enqueue_script('gsap', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js');
 		wp_enqueue_script('bundle', DIRE . '/assets/js/script.js?' . date("ymdHis", filemtime(get_template_directory() . '/assets/js/script.js')), false, '1.0', true);
 
 		// if (is_page('machi')) {

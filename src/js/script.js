@@ -163,3 +163,57 @@ $(function () {
     }
   });
 });
+
+
+// コンタクトフォームselect placeholderの設定
+window.addEventListener("DOMContentLoaded", function () {
+
+  function placeholder() {
+    let select = document.querySelector("#category");
+
+    select.addEventListener("change", function () {
+      if (this.value === "0") {
+        this.style.color = "#7F7F7F";
+      } else {
+        this.style.color = "#000";
+      }
+    })
+  }
+
+  placeholder();
+
+
+
+});
+
+
+window.addEventListener("DOMContentLoaded", function () {
+  const faq_content = document.querySelectorAll(".p-faq__container");
+  const faq__qs = document.querySelectorAll(".p-faq__q");
+  const faq__a = document.querySelector(".p-faq__a");
+  const faq__as = document.querySelectorAll(".p-faq__a");
+  console.log(faq_content);
+  console.log(faq__qs);
+  console.log(faq__a);
+
+  faq__qs.forEach((faq__q) => {
+    faq__q.addEventListener("click", function () {
+      const faq__qNext = faq__q.nextElementSibling;
+      // gsap.to(faq__qNext, { height: "auto" })
+      if (faq__q.classList.contains("is-active")) {
+        gsap.to(faq__qNext, { height: "0" })
+        faq__q.classList.remove("is-active")
+      } else {
+        const activeFaq__q = document.querySelector(".p-faq__q.is-active")
+        let delay=0;
+        if (activeFaq__q) {
+          gsap.to(activeFaq__q.nextElementSibling, { height: "0" })
+          activeFaq__q.classList.remove("is-active")
+          delay=.5
+        }
+        gsap.to(faq__qNext, { height: "auto", delay})
+        faq__q.classList.add("is-active")
+      }
+    })
+  });
+})

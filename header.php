@@ -82,7 +82,7 @@
               </li>
 							<!-------------------------------------- サービスの流れ -->
 							<li class="l-header__item l-header__item-recruit">
-                <a href="https://recruit.bco.co.jp/" class="l-header__link l-js-submenu">サービスの流れ</a>
+                <a href="<?php echo esc_url(home_url("/service")) ?>" class="l-header__link l-js-submenu">サービスの流れ</a>
               </li>
 							<!-------------------------------------- 採用情報 -->
 							<li class="l-header__item l-header__item-recruit">
@@ -90,7 +90,7 @@
               </li>
 							<!-------------------------------------- 会社情報 -->
 							<li class="l-header__item l-header__item-recruit">
-                <a href="https://recruit.bco.co.jp/" class="l-header__link l-js-submenu">会社情報</a>
+                <a href="<?php echo esc_url(home_url("/company")) ?>" class="l-header__link l-js-submenu">会社情報</a>
               </li>
 							<li class="l-header__item l-header__contact">
 								<a href="tel:0120-585-545" class="">
@@ -139,7 +139,7 @@
                 <a href="<?php echo esc_url(home_url("/reason")) ?>" class="l-drawer__link">ミツケンが選ばれる理由</a>
               </li>
               <li class="l-drawer__item">
-                <a href="<?php echo esc_url(home_url("/flow")) ?>" class="l-drawer__link">サービスの流れ</a>
+                <a href="<?php echo esc_url(home_url("/service")) ?>" class="l-drawer__link">サービスの流れ</a>
               </li>
               <li class="l-drawer__item">
                 <a href="<?php echo esc_url(home_url("/recruit")) ?>" class="l-drawer__link">採用情報</a>

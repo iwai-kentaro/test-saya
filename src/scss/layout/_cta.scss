@@ -34,6 +34,16 @@
   @include mq(md, max) {
     font-size: 2rem;
   }
+  &.l-cta__title-02{
+    font-size: 3rem;
+    font-weight: 700;
+      @include mq(md , max) {
+        font-size: 2rem;
+      }
+    &::before{
+      content: none;
+    }
+  }
 }
 
 .l-cta__text {

@@ -1,0 +1,394 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.p-reason {
+  $p-reason: &;
+  #{$p-reason}-mv {
+    background-image: url(../images/greeting/greeting-mv.webp);
+  }
+
+  #{$p-reason}-intro {
+    padding-top: 12.6rem;
+    padding-bottom: 16.8rem;
+    position: relative;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 6rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 89%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+    &__box {
+      margin-top: 5.7rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__box + &__box {
+      margin-top: 5.3rem;
+      @include mq(md, max) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  #{$p-reason}__box {
+    text-align: center;
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    &-inner {
+      display: inline-block;
+    }
+    &-item {
+      float: left;
+      @include mq(md, max) {
+        margin: 0 auto;
+      }
+      & + #{$p-reason}__box-item {
+        margin-left: 4rem;
+        @media only screen and (max-width: 1200px) {
+        }
+      }
+      &:nth-child(2) {
+        @include mq(md, max) {
+          clear: both;
+          margin-top: 4rem;
+          margin: 0;
+          margin-top: 2rem;
+        }
+      }
+      &:nth-child(3) {
+        @include mq(lg, max) {
+          clear: both;
+          margin-left: 0;
+          margin-top: 4rem;
+        }
+        @include mq(md, max) {
+          margin-top: 2rem;
+        }
+      }
+      &:nth-child(4) {
+        margin-left: 0;
+        margin-top: 4rem;
+        clear: both;
+        @include mq(lg, max) {
+          float: left;
+          clear: none;
+          margin-left: 4rem;
+        }
+        @include mq(md, max) {
+          margin-left: 0;
+          clear: both;
+          margin-top: 2rem;
+        }
+      }
+    }
+    &-title {
+    }
+    &-text {
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      line-height: calc(35 / 16);
+      color: $c-black;
+      @include mq(md, max) {
+        font-size: 1.3rem;
+      }
+      & + #{$p-reason}__box-text {
+        padding-top: 3.7rem;
+        @include mq(md, max) {
+          padding-top: 2.96rem;
+        }
+      }
+    }
+  }
+  #{$p-reason}__container {
+    padding-top: 12.6rem;
+    @include mq(md, max) {
+      padding-top: 5rem;
+    }
+    &-title {
+      text-align: center;
+      font-size: 3.6rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      color: $c-main;
+      margin-bottom: 9.2rem;
+      @include mq(lg, max) {
+        font-size: 2.88rem;
+        margin-bottom: 7rem;
+      }
+        @include mq(md , max) {
+          font-size: 2rem;
+          margin-bottom: 3rem;
+        }
+    }
+    &-content {
+      display: flex;
+      gap: 6rem;
+      @include mq(md, max) {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+    &-img {
+      max-width: 48rem;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      @include mq(lg, max) {
+        flex: 1;
+      }
+      @include mq(md, max) {
+        max-width: 100%;
+      }
+    }
+    &-textbox {
+      flex: 1;
+      margin-top: -5px;
+    }
+    &-text {
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      line-height: calc(35 / 16);
+      color: $c-black;
+      @include mq(md, max) {
+        font-size: 1.3rem;
+      }
+      & + #{$p-reason}__container-text {
+        margin-top: 3rem;
+        @include mq(md, max) {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+  #{$p-reason}-three {
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+    background-image: url(../images/top/service-bg.png);
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+    }
+    &__wrapper {
+      padding: 8.6rem 7rem 2.9rem;
+      border: 1px solid $c-border-tel;
+      background-color: $c-white;
+      @include mq(lg, max) {
+        padding: 5rem 4rem 1.5rem;
+      }
+      @include mq(md, max) {
+        padding: 1.5rem;
+      }
+    }
+    &__title-box {
+      margin-bottom: 5.95rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+    &__box {
+      &-text {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: calc(35 / 16);
+        letter-spacing: 0.09em;
+        margin-top: 4.2rem;
+        @include mq(md, max) {
+          text-align: left;
+          font-size: 1.3rem;
+        }
+      }
+      &-content {
+        &Img {
+          max-width: 80.1rem;
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+          @include mq(lg, max) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    &__content {
+      margin-top: 9rem;
+      @include mq(md, max) {
+        margin-top: 5rem;
+      }
+      &-item {
+        & + #{$p-reason}-three__content-item{
+          margin-top: 6rem;
+            @include mq(md , max) {
+              margin-top: 4rem;
+            }
+        }
+      }
+      &-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        color: $c-black;
+        position: relative;
+        padding-left: 3rem;
+        @include mq(lg, max) {
+          font-size: 2.3rem;
+          padding-left: 2.5rem;
+        }
+        @include mq(md, max) {
+          font-size: 1.8rem;
+        }
+        &::before{
+          content: "";
+          display: inline-block;
+          width: 6px;
+          height: 29px;
+          background-color: $c-main;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+            @include mq(lg,max) {
+              height: 25px;
+            }
+            @include mq(md , max) {
+              height: 20px;
+          }
+        }
+        &::after{
+          content: "";
+          display: inline-block;
+          width: 2px;
+          height: 29px;
+          background-color: $c-main;
+          position: absolute;
+          left: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          @include mq(lg,max) {
+            height: 25px;
+          }
+            @include mq(md , max) {
+              height: 20px;
+          }
+        }
+      }
+      &-text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        line-height: calc(35/16);
+        margin-top: 4.5rem;
+          @include mq(md , max) {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+          }
+      }
+    }
+  }
+
+  #{$p-reason}-aimitsuService{
+    &__inner{
+      padding-top: 10rem;
+      @include mq(md, max) {
+        padding-top: 5rem;
+      }
+    }
+    &__title-box{
+      margin-bottom: 8rem;
+        @include mq(md , max) {
+          margin-bottom: 4rem;
+        }
+    }
+    &__container{
+      &-content{
+        display: flex;
+        gap: 6rem;
+        @include mq(md, max) {
+          flex-direction: column;
+          gap: 2rem;
+        }
+      }
+      &-img {
+        max-width: 40rem;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        @include mq(lg, max) {
+          flex: 1;
+        }
+        @include mq(md, max) {
+          max-width: 100%;
+        }
+      }
+      &-textbox {
+        flex: 1;
+        margin-top: -5px;
+      }
+      &-text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        line-height: calc(35 / 16);
+        color: $c-black;
+        @include mq(md, max) {
+          font-size: 1.3rem;
+        }
+        & + #{$p-reason}-aimitsuService__container-text {
+          margin-top: 3rem;
+          @include mq(md, max) {
+            margin-top: 1.5rem;
+          }
+        }
+      }
+    }
+    &__text{
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: calc(44/20);
+      color: $c-main;
+      text-align: center;
+      letter-spacing: 0.09em;
+      margin-top: 6.5rem;
+        @include mq(md , max) {
+          font-size: 1.6rem;
+          text-align: left;
+          margin-top: 3rem;
+        } 
+    }
+  }
+}

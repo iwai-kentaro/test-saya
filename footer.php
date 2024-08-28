@@ -30,13 +30,13 @@
 					<a href="<?php echo esc_url(home_url("/")) ?>" class="l-footer__item-link">ー&nbsp;雨漏り・水濡れ修繕</a>
 				</li>
 				<li class="l-footer__item">
-					<a href="<?php echo esc_url(home_url("/")) ?>" class="l-footer__item-top">サービスの流れ</a>
+					<a href="<?php echo esc_url(home_url("/service")) ?>" class="l-footer__item-top">サービスの流れ</a>
 				</li>
 				<li class="l-footer__item">
-					<a href="<?php echo esc_url(home_url("/")) ?>" class="l-footer__item-top">会社情報</a>
-					<a href="<?php echo esc_url(home_url("/")) ?>" class="l-footer__item-link">ー&nbsp;会社概要</a>
-					<a href="<?php echo esc_url(home_url("/")) ?>" class="l-footer__item-link">ー&nbsp;代表挨拶・スタッフ紹介</a>
-					<a href="<?php echo esc_url(home_url("/")) ?>" class="l-footer__item-link">ー&nbsp;ブランドストーリー</a>
+					<a href="<?php echo esc_url(home_url("/company")) ?>" class="l-footer__item-top">会社情報</a>
+					<a href="<?php echo esc_url(home_url("/company")) ?>" class="l-footer__item-link">ー&nbsp;会社概要</a>
+					<a href="<?php echo esc_url(home_url("/greeting")) ?>" class="l-footer__item-link">ー&nbsp;代表挨拶・スタッフ紹介</a>
+					<a href="<?php echo esc_url(home_url("/brand")) ?>" class="l-footer__item-link">ー&nbsp;ブランドストーリー</a>
 				</li>
 			</ul>
 		</div>
