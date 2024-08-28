@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <g id="グループ_4" data-name="グループ 4" transform="translate(-360 -1140)">
+    <g id="長方形_11" data-name="長方形 11" transform="translate(360 1140)" fill="#fff" stroke="#0063ae" stroke-width="1">
+      <rect width="14" height="14" stroke="none"/>
+      <rect x="0.5" y="0.5" width="13" height="13" fill="none"/>
+    </g>
+    <g id="グループ_3" data-name="グループ 3" transform="translate(280.976 717.736) rotate(45)">
+      <line id="線_6" data-name="線 6" x2="5" transform="translate(360.5 244.5)" fill="none" stroke="#0063ae" stroke-linecap="square" stroke-width="1"/>
+      <line id="線_7" data-name="線 7" y2="5" transform="translate(365.5 239.5)" fill="none" stroke="#0063ae" stroke-linecap="square" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

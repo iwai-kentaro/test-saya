@@ -1,0 +1,383 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.p-leak {
+  .p-leak-mv {
+    background-image: url(../images/service/service-mv02.webp);
+  }
+
+  .p-leak-intro {
+    padding-top: 9rem;
+    padding-bottom: 16.8rem;
+    position: relative;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 8rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+
+    &__aimitsu {
+      width: 43.4rem;
+      margin-inline: auto;
+      @include mq(md, max) {
+        width: 70%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__title {
+      font-size: 3.6rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 4rem;
+      color: $c-main;
+      @include mq(md, max) {
+        font-size: 2.4rem;
+        margin-top: 2.5rem;
+      }
+    }
+
+    &__box {
+      margin-top: 5.7rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__box + &__box {
+      margin-top: 5.3rem;
+      @include mq(md, max) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  .p-leak-feature {
+    background-image: url(../images/top/service-bg.png);
+    padding-top: 10.8rem;
+    padding-bottom: 7.2rem;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-top: 5rem;
+    }
+
+    &__caption {
+      font-size: 1.6rem;
+      text-align: center;
+      margin-top: 4rem;
+      @include mq(md, max) {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+      }
+    }
+
+    .p-leak-feature__boxes {
+      margin-top: 5.8rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .p-leak-service {
+    padding-top: 8rem;
+    padding-bottom: 11.8rem;
+    position: relative;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+
+    &__block + &__block {
+      margin-top: 7rem;
+      @include mq(md, max) {
+        margin-top: 4rem;
+      }
+    }
+
+    &__content {
+      display: flex;
+      margin-top: 5.5rem;
+      column-gap: 5.2rem;
+      align-items: flex-start;
+      width: 85%;
+      margin-inline: auto;
+      @include mq(md, max) {
+        margin-top: 4rem;
+        flex-direction: column;
+        row-gap: 2rem;
+        width: 100%;
+      }
+    }
+
+    &__img {
+      width: 38%;
+      @include mq(md, max) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 400 / 266;
+      }
+    }
+
+    &__text {
+      width: 62%;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 2.1;
+      @include mq(md, max) {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        width: 100%;
+      }
+    }
+  }
+
+  .p-leak-flow {
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+    background-image: url(../images/top/service-bg.png);
+
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+    }
+    &__content {
+      margin-top: 7rem;
+      width: 85%;
+      margin-inline: auto;
+      @include mq(md, max) {
+        margin-top: 3rem;
+        width: 100%;
+      }
+    }
+
+    &__items {
+      width: 100%;
+    }
+
+    &__item {
+      display: flex;
+      column-gap: 4rem;
+      align-items: flex-start;
+      @include mq(md, max) {
+        column-gap: 1.5rem;
+      }
+    }
+
+    .p-leak-flow__item + .p-leak-flow__item {
+      margin-top: 2rem;
+      @include mq(md, max) {
+        margin-top: 1rem;
+      }
+    }
+
+    &__img {
+      width: 200px;
+      flex-shrink: 0;
+      @include mq(md, max) {
+        width: 120px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__detail {
+      flex: 1;
+      padding-top: 1rem;
+    }
+
+    &__item-title {
+      font-size: 2rem;
+      font-weight: 700;
+      @include mq(md, max) {
+        font-size: 1.6rem;
+      }
+      span {
+        font-family: $second-ff;
+        color: $c-main;
+        font-size: 2.4rem;
+        padding-right: 1em;
+        @include mq(md, max) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    &__desc {
+      margin-top: 2rem;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2.1;
+      @include mq(md, max) {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        margin-top: 1.5rem;
+      }
+    }
+
+    &__arrow {
+      margin-top: 3rem;
+      display: block;
+      @include mq(md, max) {
+        margin-top: 1.5rem;
+        width: 15px;
+      }
+    }
+  }
+
+  .p-leak-case {
+    &__caption {
+      margin-top: 5.5rem;
+      font-size: 1.6rem;
+      line-height: 2.1;
+      text-align: center;
+      @include mq(md, max) {
+        margin-top: 3rem;
+        font-size: 1.4rem;
+        line-height: 1.8;
+        text-align: left;
+      }
+    }
+
+    &__items {
+      margin-top: 9rem;
+      @include mq(md, max) {
+        margin-top: 5rem;
+      }
+    }
+
+    .p-leak-case__item + .p-leak-case__item {
+      margin-top: 6rem;
+      @include mq(md, max) {
+        margin-top: 5rem;
+      }
+    }
+
+    &__item-text {
+      margin-top: 3.2rem;
+      @include mq(md, max) {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .p-leak-summary {
+    padding-top: 8.7rem;
+    padding-bottom: 10.5rem;
+    @include mq(md, max) {
+      padding-top: 7rem;
+      padding-bottom: 8rem;
+    }
+    &__caption {
+      margin-top: 5.5rem;
+      font-size: 1.6rem;
+      line-height: calc(35 / 16);
+      @include mq(md, max) {
+        margin-top: 3rem;
+        font-size: 1.4rem;
+        line-height: 1.8;
+      }
+    }
+
+    &__link {
+      margin-top: 3.8rem;
+      margin-left: auto;
+      font-size: 1.8rem;
+      width: 320px;
+      @include mq(md, max) {
+        font-size: 1.5rem;
+      }
+      &:after {
+        height: 10px;
+      }
+    }
+  }
+
+  .service-wrap {
+    position: relative;
+    padding-top: 8rem;
+    @include mq(md, max) {
+      padding-top: 5rem;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+  }
+}

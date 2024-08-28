@@ -1,0 +1,26 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.l-title-sub {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 3rem;
+  position: relative;
+  text-align: center;
+  @include mq(md, max) {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: $c-main;
+    width: 79px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

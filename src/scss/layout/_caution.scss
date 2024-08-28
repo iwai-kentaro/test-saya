@@ -1,0 +1,100 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.l-caution {
+  background-image: url(../images/service/feature_bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 8.2rem;
+  padding-bottom: 7.2rem;
+  &__title {
+    color: $c-white;
+    text-align: center;
+    font-size: 3rem;
+    @include mq(md, max) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__content {
+    background-color: $c-white;
+    padding: 5.3rem 4.6rem;
+    margin-top: 8rem;
+    @include mq(md, max) {
+      margin-top: 3rem;
+      padding: 3rem 2rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 2.1;
+    @include mq(md, max) {
+      font-size: 1.4rem;
+      line-height: 1.8;
+    }
+  }
+  &__text.--check {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text.--check:before {
+    display: block;
+    margin-right: 0.7em;
+    content: "";
+    background-image: url(../images/service/box-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    margin-bottom: 0.3rem;
+  }
+
+  &__text + &__text {
+    margin-top: 1em;
+  }
+
+  &__text.--check + &__text.--check {
+    margin-top: 0;
+  }
+
+  &__content-box {
+    background-color: #e1ecf0;
+    border: 1px solid #adcad9;
+    padding: 4rem 4rem;
+    margin-top: 3rem;
+    @include mq(md, max) {
+      padding: 3rem 2rem;
+    }
+  }
+
+  &__content-title {
+    color: $c-main;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 4rem;
+    text-align: center;
+    @include mq(md, max) {
+      padding-bottom: 1.5rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__link.c-btn {
+    margin-top: 3.8rem;
+    margin-left: auto;
+    font-size: 1.8rem;
+    width: 320px;
+    @include mq(md, max) {
+      font-size: 1.5rem;
+    }
+    &:after {
+      height: 10px;
+    }
+  }
+}

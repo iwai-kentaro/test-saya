@@ -1,0 +1,482 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.p-repair {
+  .p-repair-mv {
+    background-image: url(../images/service/service-mv01.webp);
+  }
+
+  .p-repair-intro {
+    padding-top: 9rem;
+    padding-bottom: 16.8rem;
+    position: relative;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 8rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+
+    &__p-aimitsu {
+      width: 43.4rem;
+      margin-inline: auto;
+      @include mq(md, max) {
+        width: 70%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__title {
+      font-size: 3.6rem;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 4rem;
+      color: $c-main;
+      @include mq(md, max) {
+        font-size: 2.4rem;
+        margin-top: 2.5rem;
+      }
+    }
+
+    &__copy {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: calc(44 / 20);
+      margin-top: 6.8rem;
+      @include mq(md, max) {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-top: 2rem;
+        text-align: left;
+      }
+    }
+
+    &__desc {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-top: 6rem;
+      line-height: calc(35 / 16);
+      @include mq(md, max) {
+        font-size: 1.4rem;
+        text-align: left;
+        margin-top: 3rem;
+      }
+    }
+
+    &__desc + &__desc {
+      margin-top: 2em;
+    }
+
+    &__accent {
+      text-align: center;
+      margin-top: 10.5rem;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: calc(66 / 30);
+      padding-bottom: 0.5rem;
+      position: relative;
+      width: fit-content;
+      margin-inline: auto;
+      @include mq(md, max) {
+        font-size: 2rem;
+        line-height: 1.8;
+        margin-top: 5rem;
+      }
+      &:after {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 5px;
+        border-top: 1px solid $c-main;
+        border-bottom: 1px solid $c-main;
+      }
+    }
+
+    &__box:nth-of-type(1) {
+      margin-top: 5.7rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__box + &__box {
+      margin-top: 5.3rem;
+      @include mq(md, max) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  .p-repair-causing {
+    padding-top: 6rem;
+    padding-bottom: 10.5rem;
+    background-image: url(../images/top/service-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 6rem;
+    }
+    &__caption {
+      margin-top: 4rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: calc(35 / 16);
+      width: fit-content;
+      margin-inline: auto;
+      @include mq(md, max) {
+        margin-top: 3rem;
+        line-height: 1.8;
+        font-size: 1.4rem;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      margin-top: 7.5rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__point {
+      padding-top: 5.3rem;
+      padding-bottom: 5.3rem;
+      background-color: #f4f7f8;
+      border: 1px solid #adcad9;
+      margin-top: 5.3rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+        padding: 2rem;
+      }
+    }
+
+    &__point-text {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: calc(35 / 16);
+      span {
+        color: $c-main;
+      }
+      @include mq(md, max) {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        text-align: left;
+      }
+    }
+  }
+  .p-repair-feature {
+    padding-top: 10.5rem;
+    padding-bottom: 9.8rem;
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    &__boxes {
+      margin-top: 5rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .p-repair-case {
+    padding-top: 7.8rem;
+    padding-bottom: 7.8rem;
+    background-image: url(../images/top/service-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+    }
+
+    &__caption {
+      font-size: 1.6rem;
+      line-height: 2.1;
+      @include mq(md, max) {
+        font-size: 1.4;
+        line-height: 1.8;
+      }
+    }
+
+    &__caption:nth-of-type(1) {
+      margin-top: 4rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    .p-repair-case__caption + .p-repair-case__caption {
+      margin-top: 4rem;
+      @include mq(md, max) {
+        margin-top: 2rem;
+      }
+    }
+
+    &__items {
+      margin-top: 10rem;
+      @include mq(md, max) {
+        margin-top: 5rem;
+      }
+    }
+
+    &__item.--01 {
+      margin-top: 7rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__item.--02 {
+      margin-top: 10rem;
+      @include mq(md, max) {
+        margin-top: 5rem;
+      }
+    }
+
+    &__item.--03 {
+      margin-top: 6.5rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__item.--04 {
+      margin-top: 7.5rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__images {
+      display: grid;
+      row-gap: 2rem;
+      column-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 4rem;
+      @include mq(md, max) {
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+      }
+      li {
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 261 / 173;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .p-repair-case__images + .p-repair-case__item-text {
+      margin-top: 6.8rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__image-caption {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 1.5rem;
+      @media only screen and (max-width: 768px) {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+      }
+    }
+
+    &__item-text {
+      font-size: 1.6rem;
+      line-height: 2.1;
+      margin-top: 4.8rem;
+      @include mq(md, max) {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        margin-top: 2rem;
+      }
+    }
+
+    .p-repair-case__item-text + .p-repair-case__item-text {
+      margin-top: 4rem;
+      @include mq(md, max) {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .p-repair-service {
+    padding-top: 8rem;
+    padding-bottom: 11.8rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 6rem;
+    }
+
+    .p-repair-service__block + .p-repair-service__block {
+      margin-top: 7rem;
+      @include mq(md, max) {
+        margin-top: 4rem;
+      }
+    }
+
+    &__content {
+      display: flex;
+      margin-top: 5.5rem;
+      column-gap: 5.2rem;
+      align-items: flex-start;
+      @include mq(md, max) {
+        margin-top: 4rem;
+        flex-direction: column;
+        row-gap: 2rem;
+      }
+    }
+
+    &__img {
+      width: 38%;
+      @include mq(md, max) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 400 / 266;
+      }
+    }
+
+    &__text {
+      width: 62%;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 2.1;
+      @include mq(md, max) {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        width: 100%;
+      }
+      p + p {
+        margin-top: 4rem;
+        @include mq(md, max) {
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    &__list {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      @include mq(md, max) {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__item {
+      display: flex;
+      align-items: baseline;
+      &:before {
+        background-image: url(../images/service/box-check.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        display: block;
+        flex-shrink: 0;
+        height: 14px;
+        margin-right: 0.5em;
+        width: 14px;
+      }
+    }
+  }
+}

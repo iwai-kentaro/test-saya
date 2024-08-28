@@ -1,0 +1,18 @@
+/*一般ブロック*/
+p strong {
+  font-weight: 700;
+}
+
+li.blocks-gallery-item {
+  flex-grow: 0;
+}
+
+/*メインのカラム幅*/
+.wp-block {
+  max-width: 1000px;
+}
+
+/*h1タイトル*/
+.wp-block-post-title {
+  border-bottom: solid 1px #000;
+}

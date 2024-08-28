@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* -------------------------------------------*/
+$font-family-sans: "IBM Plex Sans JP", sans-serif;
+
+$font-family-serif: "Noto Serif JP", "游明朝", "YuMincho", "ヒラギノ明朝 ProN W6", "Hiragino Mincho ProN",
+  "Hiragino Mincho Pro", "ＭＳ 明朝", serif;
+
+$barlow: "Barlow", sans-serif;
+
+$second-font: "Montserrat", sans-serif;
+
+$base-ff: $font-family-sans;
+$second-ff: $second-font;
+$base-fz: 16px;
+$base-wg: 500;
+$base-ls: 0.09em;
+$base-lh: 1.5;
