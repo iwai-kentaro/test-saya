@@ -41,3 +41,47 @@ function pagination($class, $pages = '', $range = 1)
 <?php
 	endif;
 }
+
+
+// コンタクトフォームバリデーション
+// ふりがな
+function custom_wpcf7_validate_kana($result,$tag){
+
+	$tag = new WPCF7_Shortcode($tag);
+	$name = $tag->name;
+	$value = isset($_POST[$name])?trim(wp_unslash(strtr((string)$_POST[$name],"\n", " "))): "";
+
+	if($name === "your-ruby00"){
+		if(!preg_match("/^[ぁ-ん]+$/u", $value)){
+			$result->invalidate( $tag,"平仮名で入力してください。");
+		}
+	}
+	if($name === "your-ruby01"){
+		if(!preg_match("/^[ぁ-ん]+$/u", $value)){
+			$result->invalidate( $tag,"平仮名で入力してください。");
+		}
+	}
+    return $result;
+}
+add_filter('wpcf7_validate_text', 'custom_wpcf7_validate_kana', 11, 2);
+add_filter('wpcf7_validate_text*', 'custom_wpcf7_validate_kana', 11, 2);
+
+
+
+//functions.phpに以下を追記。
+add_action('wp_footer', 'redirect_to_thanks_page');
+ 
+function redirect_to_thanks_page() {
+ 
+  //トップページのurlを取得
+  $homeUrl = home_url();
+  echo <<< EOD
+    <script>
+      document.addEventListener( 'wpcf7mailsent', function( event ) {
+ 
+          //"/contact"以下は送信完了ページのurlに書き換える
+          location = '{$homeUrl}/contact/complete';
+      }, false );
+    </script>
+  EOD;
+}

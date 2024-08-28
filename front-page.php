@@ -1,10 +1,10 @@
 <?php /* Template Name: トップページ */ get_header(); ?>
 <main class="l-main p-top">
-	<a class="top-contact-button u-md_none">
+	<a href="<?php echo esc_url(home_url("/contact")) ?>" class="top-contact-button u-md_none">
 		<img src="<?php echo esc_url(get_theme_file_uri("assets/images/top/top-contact-circle.webp")); ?>" alt="">
 	</a>
 	<div class="top-contact-button-sp">
-		<a class="top-contact-button-sp__link">
+		<a href="<?php echo esc_url(home_url("/contact")) ?>" class="top-contact-button-sp__link">
 			<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/sp-tel.webp")); ?>" alt="お問い合わせはこちら">
 		</a>
 		<a class="top-contact-button-sp__link">
@@ -25,7 +25,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<figure class="p-top-mv__slide u-pc_none">
 			<picture>
 				<source srcset="<?php echo esc_url(get_theme_file_uri("assets/images/top/mv-01.webp")); ?>" media="(min-width: 666px)">
@@ -34,7 +34,7 @@
 		</figure>
 		<div class="p-top-mv__heading">
 			<h1 class="p-top-mv__ttl">
-			大家が営む<br>大規模修繕専門店
+				大家が営む<br>大規模修繕専門店
 			</h1>
 			<figure class="p-top-mv__theme"><img src="<?php echo esc_url(get_theme_file_uri("assets/images/top/top-mv-text.png")); ?>" alt=""></figure>
 			<p class="p-top-mv__text">「大規模修繕を単なる出費で終わらせたくない」<br class="u-pc_none">マンションオーナー様向け</p>
@@ -100,7 +100,7 @@
 					</figure>
 				</div>
 			</div>
-	</div>
+		</div>
 	</div>
 
 	<section class="p-top-service">
@@ -236,38 +236,38 @@
 				<div class="p-top-interview__content">
 					<div class="p-top-interview__swiper-container">
 						<div class="p-top-interview__swiper swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
-										<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
-										<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
-									</div>
-									<div class="swiper-slide">
-										<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
-										<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
-										<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
-									</div>
-									<div class="swiper-slide">
-										<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
-										<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
-										<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
-									</div>
-									<div class="swiper-slide">
-										<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
-										<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
-										<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
-									</div>
-									<div class="swiper-slide">
-										<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
-										<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
-										<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
-									</div>
-									<div class="swiper-slide">
-										<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
-										<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
-										<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
-									</div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
+									<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
+									<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
 								</div>
+								<div class="swiper-slide">
+									<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
+									<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
+									<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
+								</div>
+								<div class="swiper-slide">
+									<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
+									<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
+									<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
+								</div>
+								<div class="swiper-slide">
+									<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
+									<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
+									<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
+								</div>
+								<div class="swiper-slide">
+									<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
+									<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
+									<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
+								</div>
+								<div class="swiper-slide">
+									<img src="<?php echo esc_url(get_theme_file_uri("assets/images/common/test-interview.webp")); ?>" alt="">
+									<time class="p-top-interview__date" datetime="<?php echo get_the_date('Y-m-d'); ?>">2024.01.01</time>
+									<p class="p-top-interview__item-title">元気の出る大家の会会長×建築社長</p>
+								</div>
+							</div>
 						</div>
 						<!-- ページネーション -->
 						<div class="swiper-pagination"></div>
@@ -276,8 +276,8 @@
 						<div class="swiper-button-next"></div>
 					</div>
 				</div>
-			<a href="<?php echo esc_url(home_url("/interview")) ?>" class="p-top-interview__more c-btn">more</a>
-		</div>
+				<a href="<?php echo esc_url(home_url("/interview")) ?>" class="p-top-interview__more c-btn">more</a>
+			</div>
 	</section>
 
 	<section class="p-top-company">
@@ -319,7 +319,7 @@
 				</div>
 				<div class="p-top-company__right">
 					<div class="p-top-company__map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.3458723555755!2d135.62341297596043!3d34.494114794269116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d63d5fe0ea3b%3A0x5bd4567b7a68a56c!2z5qCq5byP5Lya56S-44Of44OE44Kx44Oz!5e0!3m2!1sja!2sjp!4v1723608305047!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.3458723555755!2d135.62341297596043!3d34.494114794269116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d63d5fe0ea3b%3A0x5bd4567b7a68a56c!2z5qCq5byP5Lya56S-44Of44OE44Kx44Oz!5e0!3m2!1sja!2sjp!4v1723608305047!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 					<a href="<?php echo esc_url(home_url("/")) ?>" class="p-top-company__more c-btn u-md_none">more</a>
 				</div>

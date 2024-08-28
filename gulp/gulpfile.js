@@ -161,7 +161,7 @@ const browserSyncFunc = () => {
 };
 const browserSyncOption = {
   port: 80,
-  proxy: "http://localhost:10073/",
+  proxy: "http://localhost:10038/",
   open: true,
   reloadOnRestart: true,
 };

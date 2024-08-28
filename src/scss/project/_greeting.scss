@@ -1,0 +1,420 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.p-greeting {
+  $p-greeting: &;
+  #{$p-greeting}-mv {
+    background-image: url(../images/greeting/greeting-mv.webp);
+  }
+
+  #{$p-greeting}-intro {
+    padding-top: 12.6rem;
+    padding-bottom: 16.8rem;
+    position: relative;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 8rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+    &__box {
+      margin-top: 5.7rem;
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__box + &__box {
+      margin-top: 5.3rem;
+      @include mq(md, max) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+  // 代表挨拶
+  #{$p-greeting}__box {
+    &-title {
+      font-size: 3.6rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      line-height: 1;
+      color: $c-black;
+      border-left: 1rem solid $c-main;
+      padding-top: 1.5rem;
+      padding-left: 3rem;
+      @include mq(md, max) {
+        font-size: 2.2rem;
+        padding-top: 0.8rem;
+        padding-left: 2rem;
+        border-left: 0.8rem solid $c-main;
+      }
+    }
+    &-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 9.2rem;
+      margin-bottom: 1.9rem;
+      gap: 6rem;
+      @include mq(md, max) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 1.52rem;
+      }
+      &-img {
+        max-width: 40rem;
+        width: 100%;
+        height: auto;
+          @include mq(lg,max) {
+            max-width: 32rem;
+          }
+            @include mq(md , max) {
+              max-width: 100%;
+              img{
+                object-fit: cover;
+                object-position: top;
+                aspect-ratio: 1/1;
+              }
+            }
+      }
+      &-textBox {
+        flex:1;
+        margin-top: -0.5rem;
+      }
+      &-text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        line-height: calc(35 / 16);
+        color: $c-black;
+        @include mq(md, max) {
+          font-size: 1.3rem;
+        }
+        & + #{$p-greeting}__box-container-text {
+          padding-top: 3.7rem;
+          @include mq(md, max) {
+            padding-top: 2.96rem;
+          }
+        }
+      }
+    }
+    &-text {
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      line-height: calc(35 / 16);
+      color: $c-black;
+      @include mq(md, max) {
+        font-size: 1.3rem;
+      }
+      & + #{$p-greeting}__box-text {
+        padding-top: 3.7rem;
+        @include mq(md, max) {
+          padding-top: 2.96rem;
+        }
+      }
+    }
+  }
+  #{$p-greeting}__signature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2.62rem;
+    margin-top: 3.7rem;
+    @include mq(md, max) {
+      gap: 2rem;
+      margin-top: 2.96rem;
+    }
+    &-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      color: $c-black;
+      @include mq(md, max) {
+        font-size: 1.44rem;
+      }
+    }
+    &-img {
+      max-width: 15.4rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+  // 代表挨拶
+
+  // staff
+  #{$p-greeting}-staff {
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+    background-image: url(../images/top/service-bg.png);
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+    }
+    &__title-box {
+      margin-bottom: 7.2rem;
+        @include mq(md , max) {
+          margin-bottom: 5rem;
+        }
+    }
+    &__wrapper {
+      padding: 6rem;
+      border: 0.1rem solid $c-border-tel;
+      background-color: $c-white;
+      @include mq(md, max) {
+        padding: 2rem;
+      }
+      & + #{$p-greeting}-staff__wrapper{
+        margin-top: 6rem;
+          @include mq(md , max) {
+            margin-top: 4.8rem;
+          }
+      }
+    }
+    &__container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 5.5rem;
+      @include mq(md, max) {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+      }
+      &-imgTextBox {
+      }
+      &-img {
+        max-width: 380px;
+        width: 100%;
+        height: auto;
+      }
+      &-textBox {
+        flex: 1;
+      }
+      &-textPost {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 1;
+        color: $c-main;
+        margin-bottom: 2.5rem;
+        @include mq(md, max) {
+          font-size: 1.44rem;
+        }
+      }
+      &-textName {
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        line-height: 1;
+        color: $c-black;
+        margin-bottom: 3.5rem;
+          @include mq(md , max) {
+        margin-bottom: 2rem;
+          }
+        &Sub {
+          font-size: 1.6rem;
+          line-height: calc(35 / 16);
+          color: $c-gray02;
+          margin-left: 3rem;
+        }
+      }
+      &-text {
+        font-size: 1.6rem;
+        line-height: calc(35 / 16);
+        color: $c-black;
+        @include mq(md, max) {
+          font-size: 1.3rem;
+        }
+        & + #{$p-greeting}-staff__container-text {
+          margin-top: 2.5rem;
+          @include mq(md, max) {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+    &__textbox {
+      margin-top: 3.6rem;
+      @include mq(md, max) {
+        margin-top: 2.88rem;
+      }
+      &-text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: calc(35 / 16);
+        letter-spacing: 0.09em;
+        color: $c-black;
+        @include mq(md, max) {
+          font-size: 1.3rem;
+        }
+        & + #{$p-greeting}-staff__textbox-text {
+          margin-top: 2.5rem;
+          @include mq(md, max) {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+
+    &__qaBox {
+      margin-top: 5.6rem;
+      @include mq(md, max) {
+        margin-top: 4.48rem;
+      }
+      &-title {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        line-height: 1;
+        color: $c-black;
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 2.3rem;
+        @include mq(md, max) {
+          font-size: 1.4rem;
+          margin-bottom: 1.84rem;
+        }
+      }
+      &-q {
+        font-size: 2.4rem;
+        font-family: $second-ff;
+        color: $c-main;
+        line-height: calc(29 / 24);
+        letter-spacing: 0.09em;
+        margin-right: 2rem;
+          @include mq(md , max) {
+            font-size: 1.72rem;
+            margin-right: 1rem;
+          }
+      }
+      &-caption {
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        color: $c-main;
+        margin-bottom: 2.9rem;
+        @include mq(md, max) {
+          font-size: 1.44rem;
+          margin-bottom: 2.32rem;
+        }
+      }
+      &-text{
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        line-height: calc(35/16);
+        color: $c-black;
+          @include mq(md , max) {
+            font-size: 1.3rem;
+          }
+      }
+    }
+
+    &__caption {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: calc(44 / 20);
+      color: $c-main;
+      text-align: center;
+      @include mq(md, max) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  #{$p-greeting}-recruit{
+    padding-top: 12.6rem;
+    padding-bottom: 12.9rem;
+    background-image: url(../images/common/contact-cta.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $c-white;
+    @include mq(md, max) {
+      background-position: 55%;
+      padding-top: 5rem;
+      padding-bottom: 10rem;
+    }
+    &__inner{
+      position: relative;
+    }
+    &__title{
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.09em;
+        @include mq(md , max) {
+          font-size: 1.8rem;
+          line-height: 1;
+        }
+    }
+    &__text{
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      line-height: calc(35/16);
+      margin-top: 4.2rem;
+        @include mq(md , max) {
+          font-size: 1.3rem;
+        }
+    }
+    &__info{
+      position: absolute;
+      right: 2.5rem;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+        @include mq(md , max) {
+          font-size: 1.44rem;
+          right: 1.5rem;
+          bottom: -7rem;
+          gap: 0;
+          padding-top: 3rem;
+        }
+      &::after{
+        content: "";
+        background-image: url(../images/common/arrow03.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 239px;
+        height: 7.8px;
+        display: block;
+      }
+    }
+  }
+}

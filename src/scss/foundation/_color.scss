@@ -3,14 +3,26 @@
 /* -------------------------------------------*/
 $c-base: #039ddc;
 $c-main: #0063ae;
-$c-accent: #ed7d18;
+$c-accent: #ed7d18; 
 $c-bg-footer: #585f68;
+$c-bg-gray: #FBFBFB;
 $c-text-base: #353d47;
 $c-text-main: #303030;
 $c-white: #fff;
 $c-black: #000;
 $c-gray: #eaeaea;
+$c-gray02: #949494;
+$c-gray03: #989898;
 $c-non: #79828c;
+$c-border-tel: #ADCAD9;
+$c-required: #FF2A31;
+$c-form-input: #F5F5F5;
+$c-form-input-text: #7F7F7F;
+$c-history-title: #C7D8DE;
+$c-history-border: #DFDFDF;
+$c-company-imgBg: #F6FAFB;
+$c-faq-aTitle: #71AEDC;
+$c-faq-border: #ADCAD9;
 
 @mixin c-grad--main {
   background: rgb(255, 255, 255);

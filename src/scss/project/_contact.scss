@@ -1,0 +1,517 @@
+@charset "utf-8";
+@use "../foundation" as *;
+
+/* -------------------------------------------*/
+
+.p-contact {
+  $p-contact: &;
+  .p-contact-mv {
+    background-image: url(../images/contact/contact-mv01.webp);
+  }
+
+  .p-contact-intro {
+    padding-top: 9rem;
+    padding-bottom: 16.8rem;
+    position: relative;
+    @include mq(md, max) {
+      padding-top: 5rem;
+      padding-bottom: 8rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: #f4f7f8;
+    }
+
+    &:before {
+      width: 10.9vw;
+      height: 95%;
+      bottom: 0;
+      right: 0;
+      @media only screen and (max-width: 1600px) {
+        width: 5vw;
+      }
+      @include mq(xl, max) {
+        content: none;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 7.2rem;
+      bottom: 0;
+      left: 0;
+      @include mq(md, max) {
+        content: none;
+      }
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      font-weight: 500;
+      text-align: center;
+      color: $c-black;
+      margin-bottom: 8rem;
+      @include mq(md, max) {
+        font-size: 1.3rem;
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__telbox {
+      display: flex;
+      align-items: center;
+      max-width: 95.7rem;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      gap: 8rem;
+      border: 1px solid $c-border-tel;
+      padding: 5rem 8rem;
+      @include mq(md, max) {
+        flex-direction: column;
+        gap: 2.4rem;
+        padding: 2rem 3.4rem;
+      }
+      &-title {
+        font-size: 1.8rem;
+        @include mq(md, max) {
+          font-size: 1.44rem;
+        }
+      }
+      &-img {
+        max-width: 31.1rem;
+        width: 100%;
+        height: auto;
+        @include mq(md, max) {
+          max-width: 24.8rem;
+        }
+      }
+    }
+  }
+
+  // コンタクトフォーム
+  &-form {
+    $p-contact-form: &;
+    max-width: 95.7rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 7.8rem;
+    #{$p-contact-form}__list {
+      #{$p-contact-form}__field {
+        // 個人情報の取り扱いについて
+        &:nth-child(10) {
+          margin-top: 7.5rem;
+          flex-direction: column;
+          text-align: center;
+          gap: 4.95rem;
+            @include mq(md , max) {
+              margin-top: 6rem;
+              gap: 3rem;
+            }
+          #{$p-contact-form}__label {
+            letter-spacing: 0.09em;
+            font-weight: 500;
+          }
+          #{$p-contact-form}__data {
+            letter-spacing: 0;
+            font-weight: 500;
+          }
+          .wpcf7-form-control-wrap {
+          }
+          .wpcf7-list-item-label {
+            padding-top: 0.2rem;
+          }
+          .wpcf7-list-item {
+            label {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 1.22rem;
+            }
+          }
+          // カスタムチェックボックスの作成
+          #{$p-contact-form}__checkbox {
+            display: block;
+            &[type="checkbox"] {
+              position: relative;
+              width: 2.3rem;
+              height: 2.3rem;
+              background-color: $c-form-input;
+              box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16);
+              border-radius: 0.5rem;
+              opacity: 0.7;
+                @include mq(md , max) {
+                  width: 1.84rem;
+                  height: 1.84rem;
+                }
+            }
+            &[type="checkbox"]:checked {
+              &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 2.3rem;
+                height: 1.3rem;
+                border-left: 0.3rem solid $c-main;
+                border-bottom: 0.3rem solid $c-main;
+                transform: rotate(-45deg);
+                  @include mq(md , max) {
+                    width: 1.84rem;
+                    height: 1.04rem;
+                  }
+              }
+            }
+          }
+        }
+      }
+    }
+    //フォーム個別
+    #{$p-contact-form}__field {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      @include mq(md, max) {
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 2.5rem;
+      }
+      // 氏名、ふりがな
+      &:nth-child(2),
+      &:nth-child(3) {
+        #{$p-contact-form}__data {
+          display: flex;
+          align-items: center;
+          position: relative;
+        }
+        #{$p-contact-form}__input {
+          max-width: 30rem;
+          width: 100%;
+          height: 7.3rem;
+          background-color: $c-form-input;
+          box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16);
+          border-radius: 0.5rem;
+          opacity: 0.7;
+          padding-left: 3rem;
+          padding-right: 3rem;
+          @include mq(lg, max) {
+            height: 5.84rem;
+          }
+          @include mq(md, max) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+        }
+      }
+      // 郵便番号、電話番号、メールアドレス
+      &:nth-child(4),
+      &:nth-child(7),
+      &:nth-child(8) {
+        #{$p-contact-form}__input {
+          max-width: 39rem;
+          width: 100%;
+          height: 7.3rem;
+          background-color: $c-form-input;
+          box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16);
+          border-radius: 0.5rem;
+          opacity: 0.7;
+          padding-left: 3rem;
+          padding-right: 3rem;
+          @include mq(lg, max) {
+            height: 5.84rem;
+          }
+          @include mq(md, max) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+        }
+      }
+      // お問い合わせの内容
+      &:nth-child(9) {
+        align-items: flex-start;
+        #{$p-contact-form}__label {
+          padding-top: 2.8rem;
+        }
+      }
+    }
+    //フォーム間余白
+    #{$p-contact-form}__field + #{$p-contact-form}__field {
+      margin-top: 4.2rem;
+      @include mq(lg, max) {
+        margin-top: 3.8rem;
+      }
+      @include mq(md, max) {
+        margin-top: 3rem;
+      }
+    }
+    .wpcf7-not-valid-tip {
+      margin-top: 1rem;
+      @include mq(md, max) {
+        font-size: 0.8rem;
+      }
+    }
+    #{$p-contact-form}__label {
+      font-size: 1.6rem;
+      font-weight: 700;
+      flex: 1;
+      letter-spacing: 0.06em;
+      color: $c-black;
+      @include mq(lg, max) {
+        font-size: 1.4rem;
+        max-width: 53.6rem;
+        width: 100%;
+      }
+        @include mq(md , max) {
+          font-size: 1.4rem;
+        }
+    }
+    #{$p-contact-form}__label-anker {
+      color: $c-main;
+    }
+    #{$p-contact-form}__required {
+      color: $c-required;
+      margin-left: 1rem;
+      font-size: 1.5rem;
+      letter-spacing: 0;
+      @include mq(lg, max) {
+        font-size: 1rem;
+      }
+    }
+    //input
+    #{$p-contact-form}__input {
+      max-width: 67rem;
+      width: 100%;
+      height: 7.3rem;
+      background-color: $c-form-input;
+      box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 0.5rem;
+      opacity: 0.7;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      @include mq(lg, max) {
+        max-width: 53.6rem;
+        height: 5.84rem;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+      }
+      @include mq(md, max) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+    // 氏名、ふりがなのコンテナ
+    #{$p-contact-form}__data-box {
+      max-width: 67rem;
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 7.3rem;
+      @include mq(lg, max) {
+        max-width: 53.6rem;
+      }
+      @include mq(md, max) {
+        gap: 3rem;
+      }
+    }
+    //各input
+    #{$p-contact-form}__data {
+      max-width: 67rem;
+      width: 100%;
+      height: auto;
+      font-size: 1.6rem;
+      @include mq(lg, max) {
+        max-width: 53.6rem;
+      }
+    }
+    //カテゴリー選択
+    #{$p-contact-form}__data-select {
+      max-width: 67rem;
+      width: 100%;
+      height: auto;
+      position: relative;
+      @include mq(lg, max) {
+        max-width: 53.6rem;
+        height: 5.84rem;
+      }
+      &::after{
+        content: "";
+        background-image: url(../images/contact/triangle.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        width: 1.7rem;
+        height: 1.5rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 3rem;
+        pointer-events: none;
+          @include mq(md , max) {
+            right: 2rem;
+          }
+      }
+    }
+    #{$p-contact-form}__select {
+      background-color: $c-form-input;
+      box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 0.5rem;
+      opacity: 0.7;
+      max-width: 67rem;
+      width: 100%;
+      height: 7.3rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      color: $c-form-input-text;
+      font-size: 1.6rem;
+      @include mq(lg, max) {
+        max-width: 53.6rem;
+        height: 5.84rem;
+      }
+      @include mq(md, max) {
+        left: 0;
+        // top: -2.5rem;
+        transform: none;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+      }
+    }
+    //first name
+    #{$p-contact-form}__name-first {
+      position: absolute;
+      left: -3.6rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $c-form-input-text;
+      line-height: calc(35 / 16);
+      top: 50%;
+      transform: translateY(-50%);
+      @include mq(lg, max) {
+        font-size: 1.3rem;
+      }
+      @include mq(md, max) {
+        left: 0;
+        top: -2.5rem;
+        transform: none;
+        font-size: 1.3rem;
+      }
+    }
+    //last name
+    #{$p-contact-form}__name-end {
+      position: absolute;
+      left: -3.6rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $c-form-input-text;
+      line-height: calc(35 / 16);
+      top: 50%;
+      transform: translateY(-50%);
+      @include mq(lg, max) {
+        font-size: 1.3rem;
+      }
+      @include mq(md, max) {
+        left: 0;
+        top: -2.5rem;
+        transform: none;
+        font-size: 1.3rem;
+      }
+    }
+    //first name
+    #{$p-contact-form}__ruby-first {
+      position: absolute;
+      left: -3.6rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $c-form-input-text;
+      line-height: calc(35 / 16);
+      top: 50%;
+      transform: translateY(-50%);
+      @include mq(lg, max) {
+        font-size: 1.3rem;
+      }
+      @include mq(md, max) {
+        left: 0;
+        top: -2.5rem;
+        transform: none;
+        font-size: 1.3rem;
+      }
+    }
+    //last name
+    #{$p-contact-form}__ruby-end {
+      position: absolute;
+      left: -3.6rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $c-form-input-text;
+      line-height: calc(35 / 16);
+      top: 50%;
+      transform: translateY(-50%);
+      @include mq(lg, max) {
+        font-size: 1.3rem;
+      }
+      @include mq(md, max) {
+        left: 0;
+        top: -2.5rem;
+        transform: none;
+        font-size: 1.3rem;
+      }
+    }
+    // textarea
+    #{$p-contact-form}__textarea {
+      background-color: $c-form-input;
+      box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.16);
+      border-radius: 0.5rem;
+      opacity: 0.7;
+      max-width: 67rem;
+      width: 100%;
+      height: 18rem;
+      padding: 3rem;
+      resize: none;
+      font-size: 1.6rem;
+      @include mq(lg, max) {
+        max-width: 53.6rem;
+        height: 14.4rem;
+      }
+      @include mq(md, max) {
+        padding: 2rem;
+      }
+    }
+    //送信ボタン
+    #{$p-contact-form}__submit-button {
+      border: 1px solid $c-black;
+      max-width: 37.8rem;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      margin-top: 8.53rem;
+      position: relative;
+      text-align: center;
+        @include mq(md , max) {
+            max-width: 30.24rem;
+        }
+      .wpcf7-spinner {
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    #{$p-contact-form}__submit-input {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $c-black;
+      letter-spacing: 0.09em;
+      cursor: pointer;
+      padding: 3.4rem 17.2rem;
+        @include mq(md , max) {
+          padding: 2.7rem 10rem;
+        }
+    }
+  }
+}
